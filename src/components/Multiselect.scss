@@ -1,0 +1,94 @@
+body {
+    background-color: #dcdcdc;
+    background-image: url('../images/bg.jpeg');
+}
+.multi-select {
+    position: relative;
+    display: inline-block;
+
+    .selected-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+
+        .selected-item {
+            background-color: #eee;
+            padding: 3px 5px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+
+    input {
+        padding: 5px;
+        border: 2px solid blue;
+        width: 200px;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 5px;
+        border-radius: 10px;
+        text-transform: capitalize;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        border: 1px solid #ccc;
+        z-index: 1;
+        border-radius: 10px;
+        margin-top: 10px;
+        max-height: 200px;
+        overflow-y: scroll;
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+            flex-direction: row;
+            text-transform: capitalize;
+            &.selected {
+                background-color: rgb(163, 231, 250);
+            }
+            &:hover {
+                background-color: #eee;
+            }
+
+            .alight__tick {
+                margin-left: auto;
+                padding-left: 5px;
+            }
+
+            >div {
+                margin-right: 5px;
+            }
+        }
+    }
+    .no-drop {
+        display: none;
+    }
+}
+
+.selected-item {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid rgb(7, 169, 194);
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #f2f2f2;
+}
